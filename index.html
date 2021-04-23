@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
   <body>
     <header class="main-header">
-      <h1 class="main-header__logo"><a class="main-header__logo-link" href="#">DEVICE</a></h1>
+      <h1 class="main-header__logo">
+        <a class="main-header__logo-link" href="#">DEVICE</a>
+      </h1>
       <form
         class="search-form main-header__search-form"
         method="post"
@@ -155,7 +157,9 @@
                 Мотивирующие фитнес-браслеты помогут найти в себе силы не
                 пропускать занятие и соблюдать диету.
               </p>
-              <button class="product__detail" type="button">Подробнее</button>
+              <button class="button product__detail-button" type="button">
+                Подробнее
+              </button>
               <ul class="product__slide-list">
                 <li class="product__slide">
                   <button class="product__button" type="button">
@@ -201,7 +205,9 @@
                 Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
                 лазером,замаскированным под стандартную камеру.
               </p>
-              <button class="product__detail" type="button">Подробнее</button>
+              <button class="button product__detail-button" type="button">
+                Подробнее
+              </button>
               <ul class="product__slide-list">
                 <li class="product__slide">
                   <button class="product__button" type="button">
@@ -239,20 +245,50 @@
       <section class="product-catalog">
         <ul class="product-catalog__list">
           <li class="product-catalog__item product-catalog__item_reality">
+            <div class="product-catalog__container-image">
+              <div class="product-catalog__item-image">
+                <img src="./img/popular-1.svg" alt="Виртуальная реальность" />
+              </div>
+            </div>
             <a href="#" class="product-catalog__link">Виртуальная реальность</a>
           </li>
           <li class="product-catalog__item product-catalog__item_monopods">
+            <div class="product-catalog__container-image">
+              <div class="product-catalog__item-image">
+                <img src="./img/popular-2.svg" alt="Моноподы для селфи" />
+              </div>
+            </div>
             <a href="#" class="product-catalog__link">Моноподы для селфи</a>
           </li>
           <li class="product-catalog__item product-catalog__item_cameras">
+            <div class="product-catalog__container-image">
+              <div class="product-catalog__item-image">
+                <img src="./img/popular-3.svg" alt="Экшн-камеры" />
+              </div>
+            </div>
             <a href="#" class="product-catalog__link">Экшн-камеры</a>
           </li>
           <li class="product-catalog__item product-catalog__item_bracelets">
+            <div class="product-catalog__container-image">
+              <div class="product-catalog__item-image">
+                <img src="./img/popular-4.svg" alt="Фитнес-браслеты" />
+              </div>
+            </div>
             <a href="#" class="product-catalog__link">Фитнес-браслеты</a>
           </li>
           <li class="product-catalog__item product-catalog__item_clock">
+            <div class="product-catalog__container-image">
+              <div class="product-catalog__item-image">
+                <img src="./img/popular-5.svg" alt="Умные часы" />
+              </div>
+            </div>
             <a href="#" class="product-catalog__link">Умные часы</a>
           </li>
+          <div class="product-catalog__container-image">
+            <div class="product-catalog__item-image">
+              <img src="./img/popular-6.svg" alt="Квадрокоптеры" />
+            </div>
+          </div>
           <li class="product-catalog__item product-catalog__item_quadcopters">
             <a href="#" class="product-catalog__link">Квадрокоптеры</a>
           </li>
@@ -415,16 +451,18 @@
       </section>
     </main>
     <footer class="footer">
-      <h1 class="footer__logo">DEVICE</h1>
+      <h1 class="footer__logo">
+        <a class="footer__logo-link" href="#">DEVICE</a>
+      </h1>
       <ul class="footer__user-navigation">
         <li class="footer__item">
-          <a href="#" class="footer__login">Войти</a>
+          <a href="#" class="footer__link">Войти</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__compare">Сравнить</a>
+          <a href="#" class="footer__link">Сравнить</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__bin">Корзина</a>
+          <a href="#" class="footer__link">Корзина</a>
         </li>
       </ul>
       <nav
@@ -432,13 +470,13 @@
       >
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
-            <a href="#">Доставка</a>
+            <a class="main-navigation__item-link" href="#">Доставка</a>
           </li>
           <li class="main-navigation__item">
-            <a href="#">Гарантия</a>
+            <a class="main-navigation__item-link" href="#">Гарантия</a>
           </li>
           <li class="main-navigation__item">
-            <a href="#">Контакты</a>
+            <a class="main-navigation__item-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -446,27 +484,46 @@
       <p class="footer__tel">
         Тел:
         <a class="footer__tel-link" href="tel:+7(495)495-95-95"
-          >+7 (495) 495-95-95</a
+          >Тел: +7 (495) 495-95-95</a
         >
       </p>
       <ul class="footer__social-networks">
         <li class="footer__social-link">
-          <a href="https://www.facebook.com"
-            ><span class="visually-hidden">Фейсбук</span></a
-          >
+          <div class="footer__social-image">
+            <a href="https://www.facebook.com"
+              ><img src="./img/fb.svg" alt="Фейсбук" /><span
+                class="visually-hidden"
+                >Фейсбук</span
+              ></a
+            >
+          </div>
         </li>
         <li class="footer__social-link">
-          <a href="https://www.instagram.com"><span class="visually-hidden">Инстаграм</span></a>
+          <div class="footer__social-image">
+            <a href="https://www.instagram.com"
+              ><img src="./img/inst.svg" alt="Инстаграм" /><span
+                class="visually-hidden"
+                >Инстаграм</span
+              ></a
+            >
+          </div>
         </li>
         <li class="footer__social-link">
-          <a href="https://twitter.com"><span class="visually-hidden">Твиттер</span></a>
+          <div class="footer__social-image">
+            <a href="https://twitter.com"
+              ><img src="./img/twit.svg" alt="Твиттер" /><span
+                class="visually-hidden"
+                >Твиттер</span
+              ></a
+            >
+          </div>
         </li>
       </ul>
-      <img
-        src="./img/logo-html.svg"
-        alt="Логотип htmlacademy"
-        class="footer__html-image"
-      />
+      <div class="footer__html-image">
+        <a href="https://htmlacademy.ru"
+          ><img src="./img/logo-html.svg" alt="Логотип htmlacademy"
+        /></a>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
