@@ -369,7 +369,7 @@ a {
   margin-top: 25px;
   padding: 0;
   height: 125px;
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   column-gap: 65px;
@@ -377,4 +377,46 @@ a {
 .main-navigation__catalog-item:nth-child(5){
   margin-bottom: 50px;
 
+}
+.product-info__item{
+  display: none;
+}
+.product-info__item_active{
+  display: block;
+}
+.product__number{
+  font-size: 179px;
+  font-family: "Gilroy";
+  font-weight: 900;
+  letter-spacing: 1.79px;
+  display: none;
+}
+.product-info__product{
+  display: flex;
+  justify-content: center;
+  border: 1px solid #000;
+}
+.product__img-container{
+  border: 1px solid #000;
+  margin-right: 125px;
+  margin-left: 90px;
+}
+.product__text-container{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  margin-right: 60px;
+}
+.product-info__list{
+  padding: 0;
+}
+.product__slide-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 15px;
+}
+.product__slide-list{
+  display: flex;
+  justify-content: center;
 }

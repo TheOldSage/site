@@ -51,7 +51,6 @@
               <span class="main-navigation__button-plus"> + </span>
             </button>
             <ul class="main-navigation__catalog-list">
-              </li>
               <li class="main-navigation__catalog-item">
                 <a href="#" class="main-navigation__catalog-link"
                   >Виртуальная реальность</a
@@ -79,6 +78,7 @@
                 <a href="#" class="main-navigation__catalog-link"
                   >Квадрокоптеры</a
                 >
+              </li>
             </ul>
           </li>
           <li class="main-navigation__item">
@@ -97,56 +97,64 @@
       <section class="product-info">
         <div class="container">
           <ul class="product-info__list">
-            <li class="product-info__item">
+            <li class="product-info__item product-info__item_active">
               <div class="product product-info__product">
-                <img
-                  class="product__img"
-                  src="./img/slider-1.png"
-                  alt="Монопод для селфи"
-                />
-                <p>01</p>
-                <h2 class="product__title">Делай селфи, как Бен Стиллер!</h2>
-                <p class="product__text">
-                  Самая длинная палка для селфи доступна в нашем магазине.
-                  Восемь(Восемь Карл!) метров длиной и весом 5 килограмм.
-                </p>
-                <button class="button product__detail-button" type="button">
-                  Подробнее
-                </button>
-                <ul class="product__slide-list">
-                  <li class="product__slide">
-                    <button
-                      class="product__button product__button_active"
-                      type="button"
-                    >
-                      <span class="visually-hidden">Первый слайд</span>
+                <div class="product__img-container">
+                  <img
+                    class="product__img"
+                    src="./img/slider-1.png"
+                    alt="Монопод для селфи"
+                  />
+                </div>
+                <p class="product__number">01</p>
+                <div class="product__text-container">
+                  <h2 class="product__title">Делай селфи, как Бен Стиллер!</h2>
+                  <p class="product__text">
+                    Самая длинная палка для селфи доступна в нашем магазине.
+                    Восемь (Восемь, Карл!) метров длиной и весом всего 5
+                    килограмм.
+                  </p>
+                  <div class="product__slide-container">
+                    <button class="button product__detail-button" type="button">
+                      Подробнее
                     </button>
-                  </li>
-                  <li class="product__slide">
-                    <button class="product__button" type="button">
-                      <span class="visually-hidden">Второй слайд</span>
-                    </button>
-                  </li>
-                  <li class="product__slide">
-                    <button class="product__button" type="button">
-                      <span class="visually-hidden">Третий слайд</span>
-                    </button>
-                  </li>
-                </ul>
-                <table class="product__table">
-                  <tr class="product__element">
-                    <td class="product__element-cell">8,5 м</td>
-                    <td class="product__element-cell">5 кг</td>
-                    <td class="product__element-cell">Карбон</td>
-                  </tr>
-                  <tr class="product__element product__element_tiny">
-                    <td class="product__element-cell">Длина палки</td>
-                    <td class="product__element-cell">Вес палки</td>
-                    <td class="product__element-cell">Материал</td>
-                  </tr>
-                </table>
+                    <ul class="product__slide-list">
+                      <li class="product__slide">
+                        <button
+                          class="product__button product__button_active"
+                          type="button"
+                        >
+                          <span class="visually-hidden">Первый слайд</span>
+                        </button>
+                      </li>
+                      <li class="product__slide">
+                        <button class="product__button" type="button">
+                          <span class="visually-hidden">Второй слайд</span>
+                        </button>
+                      </li>
+                      <li class="product__slide">
+                        <button class="product__button" type="button">
+                          <span class="visually-hidden">Третий слайд</span>
+                        </button>
+                      </li>
+                    </ul>
+                    <table class="product__table">
+                      <tr class="product__element">
+                        <td class="product__element-cell">8,5 м</td>
+                        <td class="product__element-cell">5 кг</td>
+                        <td class="product__element-cell">Карбон</td>
+                      </tr>
+                      <tr class="product__element product__element_tiny">
+                        <td class="product__element-cell">Длина палки</td>
+                        <td class="product__element-cell">Вес палки</td>
+                        <td class="product__element-cell">Материал</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
               </div>
             </li>
+
             <li class="product-info__item">
               <div class="product">
                 <img
