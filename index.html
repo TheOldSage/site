@@ -454,32 +454,41 @@
           class="contacts-modal__form"
           method="post"
         >
-          <label>
-            <span class="contacts-modal__label-text">Ваше Имя:</span>
-            <input
-              type="text"
-              class="contacts-modal__input"
-              placeholder="Имя Фамилия"
-            />
-          </label>
-          <span class="contacts-modal__label-text">Ваш e-mail:</span>
-          <input
-            type="email"
-            class="contacts-modal__input"
-            placeholder="email@example.com"
-          />
-          <label>
-            <span class="contacts-modal__label-text">Текст письма:</span>
-            <textarea
-              type="text"
-              class="contacts-modal__textarea"
-              placeholder="В свободной форме"
-            >
-            </textarea>
-          </label>
-          <button class="button contacts-form__button" type="submit">
-            Отправить
-          </button>
+          <div class="contacts-modal__container">
+            <label class="contacts-modal__label-container">
+              <span class="contacts-modal__label-text">Ваше Имя:</span>
+              <input
+                type="text"
+                class="contacts-modal__input"
+                placeholder="Имя Фамилия"
+              />
+            </label>
+            <label class="contacts-modal__label-container">
+              <span class="contacts-modal__label-text">Ваш e-mail:</span>
+              <input
+                type="email"
+                class="contacts-modal__input"
+                placeholder="email@example.com"
+              />
+            </label>
+            <div class="contacts-modal__textarea-container">
+              <label class="contacts-modal__label-container">
+                <span
+                  class="contacts-modal__label-text contacts-modal__label-text_area"
+                  >Текст письма:</span
+                >
+                <textarea
+                  type="text"
+                  class="contacts-modal__textarea"
+                  placeholder="В свободной форме"
+                ></textarea>
+              </label>
+            </div>
+
+            <button class="button contacts-form__button" type="submit">
+              Отправить
+            </button>
+          </div>
           <button class="button-сlose contacts-form__button" type="button">
             <span class="visually-hidden">Закрыть</span>
             <span class="button-close__exit">X</span>
@@ -488,78 +497,87 @@
       </section>
     </main>
     <footer class="footer">
-      <h1 class="footer__logo">
-        <a class="footer__logo-link" href="#">DEVICE</a>
-      </h1>
-      <ul class="footer__user-navigation">
-        <li class="footer__item">
-          <a href="#" class="footer__link">Войти</a>
-        </li>
-        <li class="footer__item">
-          <a href="#" class="footer__link">Сравнить</a>
-        </li>
-        <li class="footer__item">
-          <a href="#" class="footer__link">Корзина</a>
-        </li>
-      </ul>
-      <nav
-        class="main-navigation footer__navigation main-navigation_theme-footer"
-      >
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <a class="main-navigation__item-link" href="#">Доставка</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__item-link" href="#">Гарантия</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__item-link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <p class="footer__address">г. Москва, ул. Строителей, 15</p>
-      <p class="footer__tel">
-        Тел:
-        <a class="footer__tel-link" href="tel:+7(495)495-95-95"
-          >Тел: +7 (495) 495-95-95</a
-        >
-      </p>
-      <ul class="footer__social-networks">
-        <li class="footer__social-link">
-          <div class="footer__social-image">
-            <a href="https://www.facebook.com"
-              ><img src="./img/fb.svg" alt="Фейсбук" /><span
-                class="visually-hidden"
-                >Фейсбук</span
-              ></a
+      <div class="container">
+        <div class="footer__container">
+          <h1 class="footer__logo">
+            <a class="footer__logo-link" href="#">DEVICE</a>
+          </h1>
+          <ul class="footer__user-navigation">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Войти</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Сравнить</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Корзина</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__navigation-container">
+          <p class="footer__address">г. Москва, ул. Строителей, 15</p>
+          <nav
+            class="main-navigation footer__navigation main-navigation_theme-footer"
+          >
+            <ul class="main-navigation__list">
+              <li class="main-navigation__item">
+                <a class="main-navigation__item-link" href="#">Доставка</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__item-link" href="#">Гарантия</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__item-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <p class="footer__tel">
+            Тел:
+            <a class="footer__tel-link" href="tel:+7(495)495-95-95"
+              >Тел: +7 (495) 495-95-95</a
             >
+          </p>
+        </div>
+        <div class="footer_social-container">
+          <ul class="footer__social-networks">
+            <li class="footer__social-link">
+              <div class="footer__social-image">
+                <a href="https://www.facebook.com"
+                  ><img src="./img/fb.svg" alt="Фейсбук" /><span
+                    class="visually-hidden"
+                    >Фейсбук</span
+                  ></a
+                >
+              </div>
+            </li>
+            <li class="footer__social-link">
+              <div class="footer__social-image">
+                <a href="https://www.instagram.com"
+                  ><img src="./img/inst.svg" alt="Инстаграм" /><span
+                    class="visually-hidden"
+                    >Инстаграм</span
+                  ></a
+                >
+              </div>
+            </li>
+            <li class="footer__social-link">
+              <div class="footer__social-image">
+                <a href="https://twitter.com"
+                  ><img src="./img/twit.svg" alt="Твиттер" /><span
+                    class="visually-hidden"
+                    >Твиттер</span
+                  ></a
+                >
+              </div>
+            </li>
+          </ul>
+          <div class="footer__html-image">
+            <a href="https://htmlacademy.ru"
+              ><img src="./img/logo-html.svg" alt="Логотип htmlacademy"
+            /></a>
           </div>
-        </li>
-        <li class="footer__social-link">
-          <div class="footer__social-image">
-            <a href="https://www.instagram.com"
-              ><img src="./img/inst.svg" alt="Инстаграм" /><span
-                class="visually-hidden"
-                >Инстаграм</span
-              ></a
-            >
-          </div>
-        </li>
-        <li class="footer__social-link">
-          <div class="footer__social-image">
-            <a href="https://twitter.com"
-              ><img src="./img/twit.svg" alt="Твиттер" /><span
-                class="visually-hidden"
-                >Твиттер</span
-              ></a
-            >
-          </div>
-        </li>
-      </ul>
-      <div class="footer__html-image">
-        <a href="https://htmlacademy.ru"
-          ><img src="./img/logo-html.svg" alt="Логотип htmlacademy"
-        /></a>
+        </div>
       </div>
     </footer>
     <script src="script.js"></script>
