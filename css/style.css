@@ -185,23 +185,30 @@ a {
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 3.6px;
-  background-color: #f3cf51;
+  background-color:#f3cf51;
   font-family: "Gilroy";
   font-weight: 900;
   transition: all 0.3s;
   outline: none;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
 }
-.button::after {
-  position: absolute;
+.button::before {
   content: "";
+  width: 100%;
+  height: 10px;
+  display: block;
+  background-color: #f3cf51;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.button:hover.button::before{
+  height: 40px;
 }
 .button:active {
   opacity: 30%;
-}
-.button:hover {
-  height: 40px;
-}
-button:focus {
 }
 .product__text {
   font-size: 15px;
@@ -237,10 +244,6 @@ button:focus {
 }
 .product-catalog__list {
   list-style: none;
-}
-.user-help__button_active {
-  background-color: #000;
-  color: #f3cf51;
 }
 .product-catalog__container-image {
   background-color: #f7e296;
@@ -503,7 +506,7 @@ button:focus {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 45px;
+  margin-top: 60px;
 }
 .user-help__button {
   display: flex;
@@ -515,11 +518,12 @@ button:focus {
   margin-bottom: 45px;
 }
 .user-help__button_active {
-  height: 40px;
+  color: #f3cf51;
   width: 280px;
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 20px;
+}
+.user-help__button_active::before{
+  background-color: #000;
+  height: 40px;
 }
 .user-help__service-list {
   padding: 0;
@@ -575,8 +579,16 @@ button:focus {
 .about-us__company {
   margin-top: 15px;
 }
+.about-us__button{
+  display: flex;
+  justify-content: center;
+  width: 260px;
+}
 .contacts__button {
   margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  width: 260px;
 }
 .contacts__map {
   margin-top: 45px;
