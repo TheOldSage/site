@@ -64,6 +64,14 @@ h2 {
   font-weight: 900;
   color: black;
 }
+h3{
+  letter-spacing: 0.18px;
+  font-family: "Gilroy";
+  font-weight: 900;
+  color: black;
+  font-size: 18px;
+  line-height: 24px;
+}
 a {
   text-decoration: none;
   transition: opacity 0.3s;
@@ -382,7 +390,7 @@ a {
   margin: 0;
 }
 .filter-form__name{
-  letter-spacing: 3.6px;
+  letter-spacing: 0.16px;
   font-family: "Gilroy";
   font-weight: 900;
   color: black;
@@ -403,17 +411,86 @@ a {
   width: 26px;
   height: 26px;
   background-image: url(./../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  margin-left: -30px;
+}
+.filter-form__radio{
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url(./../img/radio-off.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
   margin-left: -30px;
 }
 .filter-form__label{
   padding-left: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 .filter-form__input:checked + .filter-form__box {
   background-image: url(./../img/checkbox-on.svg);
 }
 .filter-form__input:disabled + .filter-form__box {
   background-image: url(./../img/checkbox-disabled-off.svg);
+  opacity: 25%;
 }
 .filter-form__input:checked:disabled + .filter-form__box {
   background-image: url(./../img/checkbox-disabled-on.svg);
+  opacity: 25%;
+}
+.filter-form__box:hover{
+  opacity: 60%;
+}
+.filter-form__input:disabled ~ .filter-form__text{
+  opacity: 25%;
+}
+.filter-form__input:checked + .filter-form__radio {
+  background-image: url(./../img/radio-on.svg);
+}
+.filter-form__input:disabled + .filter-form__radio {
+  background-image: url(./../img/radio-off-disabled.svg);
+  opacity: 25%;
+}
+.catalog__button {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  margin-bottom: 20px;
+}
+.catalog__list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 825px;
+  justify-content: space-between;
+}
+.catalog__text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalog__price{
+  font-family: "Gilroy";
+  font-weight: 300;
+  line-height: 16px;
+  font-weight: 24px;
+  color: #464646;
+  letter-spacing: 0.16px;
+}
+.catalog__img{
+  position: relative;
+}
+.catalog__container{
+  position: absolute;
+  top: 185px;
+  left: 80px;
+}
+.catalog__link{
+  color: #000;
+  opacity: 50%;
+  display: flex;
+  justify-content: center;
 }
