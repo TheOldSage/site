@@ -64,7 +64,7 @@ h2 {
   font-weight: 900;
   color: black;
 }
-h3{
+h3 {
   letter-spacing: 0.18px;
   font-family: "Gilroy";
   font-weight: 900;
@@ -376,20 +376,21 @@ a {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-.filter__menu{
+.filter__menu {
   letter-spacing: 3.2px;
   font-family: "Gilroy";
   font-weight: 900;
   color: black;
   font-size: 16px;
   line-height: 24px;
+  text-transform: uppercase;
 }
-.filter-form__menu{
+.filter-form__menu {
   border: none;
   padding: 0;
   margin: 0;
 }
-.filter-form__name{
+.filter-form__name {
   letter-spacing: 0.16px;
   font-family: "Gilroy";
   font-weight: 900;
@@ -397,16 +398,16 @@ a {
   font-size: 18px;
   line-height: 24px;
 }
-.filter-form__list{
+.filter-form__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.filter-form__input{
+.filter-form__input {
   position: absolute;
   appearance: none;
 }
-.filter-form__box{
+.filter-form__box {
   position: absolute;
   width: 26px;
   height: 26px;
@@ -415,7 +416,7 @@ a {
   background-position: 0 0;
   margin-left: -30px;
 }
-.filter-form__radio{
+.filter-form__radio {
   position: absolute;
   width: 26px;
   height: 26px;
@@ -424,7 +425,7 @@ a {
   background-position: 0 0;
   margin-left: -30px;
 }
-.filter-form__label{
+.filter-form__label {
   padding-left: 30px;
   display: flex;
   align-items: center;
@@ -441,10 +442,10 @@ a {
   background-image: url(./../img/checkbox-disabled-on.svg);
   opacity: 25%;
 }
-.filter-form__box:hover{
+.filter-form__box:hover {
   opacity: 60%;
 }
-.filter-form__input:disabled ~ .filter-form__text{
+.filter-form__input:disabled ~ .filter-form__text {
   opacity: 25%;
 }
 .filter-form__input:checked + .filter-form__radio {
@@ -454,25 +455,31 @@ a {
   background-image: url(./../img/radio-off-disabled.svg);
   opacity: 25%;
 }
+.filter-form__button {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  margin-bottom: 20px;
+}
 .catalog__button {
   display: flex;
   justify-content: center;
   width: 200px;
   margin-bottom: 20px;
 }
-.catalog__list{
+.catalog__list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   width: 825px;
   justify-content: space-between;
 }
-.catalog__text{
+.catalog__text {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.catalog__price{
+.catalog__price {
   font-family: "Gilroy";
   font-weight: 300;
   line-height: 16px;
@@ -480,17 +487,89 @@ a {
   color: #464646;
   letter-spacing: 0.16px;
 }
-.catalog__img{
+.catalog__offer {
   position: relative;
 }
-.catalog__container{
+.catalog__container {
   position: absolute;
+  display: none;
   top: 185px;
   left: 80px;
 }
-.catalog__link{
+.catalog__link {
   color: #000;
   opacity: 50%;
   display: flex;
   justify-content: center;
+}
+.catalog__offer:hover .catalog__container {
+  display: block;
+}
+.catalog__offer:hover .catalog__img-container {
+  opacity: 70%;
+}
+.catalog__sort-menu {
+  letter-spacing: 3.2px;
+  font-family: "Gilroy";
+  font-weight: 900;
+  color: black;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 30px;
+  text-transform: uppercase;
+}
+.catalog__sort-list {
+  display: flex;
+  list-style: none;
+  width: 350px;
+  justify-content: space-between;
+  margin-right: 625px;
+}
+.catalog__sorting {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalog__sort-link {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+  opacity: 30%;
+  transition: all 0.3s;
+}
+.catalog__sort-link:hover {
+  opacity: 60%;
+}
+.catalog__sort-link:active {
+  opacity: 100%;
+}
+.catalog__sort-link_active{
+  opacity: 100%;
+}
+.catalog__sort-list::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 24px;
+  left: 785px;
+  background-image: url(./../img/icon-down-dir.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 20%;
+}
+.catalog__sort-list::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 24px;
+  left: 810px;
+  background-image: url(./../img/icon-up-dir.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }

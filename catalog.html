@@ -212,15 +212,34 @@
                 </li>
               </ul>
             </fieldset>
+            <button class="button filter-form__button" type="submit">
+              Показать
+            </button>
           </form>
         </div>
       </section>
       <section class="catalog">
         <div class="container">
+          <div class="catalog__sorting">
+            <h2 class="catalog__sort-menu">Сортировка:</h2>
+            <ul class="catalog__sort-list">
+              <li class="catalog__sort-item">
+                <a class="catalog__sort-link catalog__sort-link_active" href="#">По цене</a>
+              </li>
+              <li class="catalog__sort-item">
+                <a class="catalog__sort-link" href="#">По типу</a>
+              </li>
+              <li class="catalog__sort-item">
+                <a class="catalog__sort-link" href="#">По популярности</a>
+              </li>
+            </ul>
+          </div>
           <ul class="catalog__list">
             <li class="catalog__item">
-              <div class="catalog__img">
-                <img src="./img/item-1.png" alt="Любительская селфи-палка" />
+              <div class="catalog__offer">
+                <div class="catalog__img-container">
+                  <img src="./img/item-1.png" alt="Любительская селфи-палка" />
+                </div>
                 <div class="catalog__container">
                   <button class="button catalog__button" type="button">
                     В корзину
@@ -234,8 +253,10 @@
               </div>
             </li>
             <li class="catalog__item">
-              <div class="catalog__img">
-                <img src="./img/item-2.png" alt="Любительская селфи-палка" />
+              <div class="catalog__offer">
+                <div class="catalog__img-container">
+                  <img src="./img/item-2.png" alt="Любительская селфи-палка" />
+                </div>
                 <div class="catalog__container">
                   <button class="button catalog__button" type="button">
                     В корзину
@@ -244,13 +265,18 @@
                 </div>
               </div>
               <div class="catalog__text">
-                <h3 class="catalog__name">Проффесиональная<br> селфи-палка</h3>
+                <h3 class="catalog__name">
+                  Проффесиональная<br />
+                  селфи-палка
+                </h3>
                 <span class="catalog__price">1 500 руб.</span>
               </div>
             </li>
             <li class="catalog__item">
-              <div class="catalog__img">
-                <img src="./img/item-3.png" alt="Любительская селфи-палка" />
+              <div class="catalog__offer">
+                <div class="catalog__img-container">
+                  <img src="./img/item-3.png" alt="Любительская селфи-палка" />
+                </div>
                 <div class="catalog__container">
                   <button class="button catalog__button" type="button">
                     В корзину
@@ -264,8 +290,10 @@
               </div>
             </li>
             <li class="catalog__item">
-              <div class="catalog__img">
-                <img src="./img/item-4.png" alt="Любительская селфи-палка" />
+              <div class="catalog__offer">
+                <div class="catalog__img-container">
+                  <img src="./img/item-4.png" alt="Любительская селфи-палка" />
+                </div>
                 <div class="catalog__container">
                   <button class="button catalog__button" type="button">
                     В корзину
@@ -274,7 +302,10 @@
                 </div>
               </div>
               <div class="catalog__text">
-                <h3 class="catalog__name">Селфи-палка «Следуй за<br> мной»</h3>
+                <h3 class="catalog__name">
+                  Селфи-палка «Следуй за<br />
+                  мной»
+                </h3>
                 <span class="catalog__price">4 900 руб.</span>
               </div>
             </li>
