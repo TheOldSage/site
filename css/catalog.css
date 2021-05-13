@@ -461,6 +461,9 @@ a {
   width: 200px;
   margin-bottom: 20px;
 }
+.catalog{
+  margin-left: 130px ;
+}
 .catalog__button {
   display: flex;
   justify-content: center;
@@ -477,7 +480,7 @@ a {
 .catalog__text {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 .catalog__price {
   font-family: "Gilroy";
@@ -557,10 +560,7 @@ a {
   position: absolute;
   top: 24px;
   left: 785px;
-  background-image: url(./../img/icon-down-dir.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 20%;
+  
 }
 .catalog__sort-list::after {
   content: "";
@@ -569,7 +569,267 @@ a {
   position: absolute;
   top: 24px;
   left: 810px;
+}
+.catalog__button-down{
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 365px;
+  top: 24px;
+  cursor: pointer;
+  background-image: url(./../img/icon-down-dir.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 20%;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+.catalog__button-up{
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 339px;
+  top: 24px;
+  cursor: pointer;
   background-image: url(./../img/icon-up-dir.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 20%;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+.catalog__button-up:hover{
+opacity: 40%;
+}
+.catalog__button-up:active{
+  opacity: 100%;
+}
+.catalog__button-down:hover{
+opacity: 40%;
+}
+.catalog__button-down:active{
+  opacity: 100%;
+}
+.catalog__pagination{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 130px;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+}
+.catalog__pagination-button{
+  font-family: "Gilroy";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  height: auto;
+  opacity: 30%;
+  transition: all 0.3s;
+}
+.catalog__pagination-button-toggle{
+  font-family: "Gilroy";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  height: 100%;
+  width: 125px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+.catalog__pagination-button-toggle:hover{
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.catalog__pagination-button-toggle:active{
+  background-color: rgba(0, 0, 0, 0.08);
+  opacity: 30%;
+}
+.catalog__pagination-button:hover{
+  opacity: 100%;
+}
+.catalog__pagination-button_active{
+  opacity: 100%;
+}
+.catalog__pagination-container{
+  display: flex;
+  width: 790px;
+  height: 72px;
+  background-color:  rgba(0, 0, 0, 0.08);
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 35px;
+}
+.big-container{
+  display: flex;
+  margin-bottom: 60px;
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__user-navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  width: 320px;
+}
+.main-navigation_theme-footer .main-navigation__list {
+  display: flex;
+  justify-content: space-between;
+  width: 440px;
+}
+.footer__navigation-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__navigation-container::before{
+  content: "";
+  width: 80px;
+  height: 8px;
+  position: absolute;
+  bottom: 40px;
+  background-color: #ffc600;
+
+}
+.footer__social-networks {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  margin-left: 500px;
+}
+.footer_social-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer {
+  position: relative;
+  background-color: #464646;
+}
+.footer__logo {
+  transition: all 0.3s;
+  color: #ffc600;
+  font-size: 48px;
+  line-height: 48px;
+  text-transform: uppercase;
+  letter-spacing: 0.48px;
+}
+.footer__logo:hover {
+  opacity: 60%;
+}
+.footer__logo:active {
+  opacity: 30%;
+}
+.footer__item {
+  position: relative;
+  list-style: none;
+  transition: all 0.3s;
+  opacity: 70%;
+  color: #ffffff;
+}
+.footer__item_user::before{
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 9px;
+  left: -25px;
+  background-image: url(./../img/user.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+}
+.footer__item_user::before{
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 9px;
+  left: -25px;
+  background-image: url(./../img/user.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: invert(77%) sepia(35%) saturate(2805%) hue-rotate(0deg)
+  brightness(104%) contrast(104%);
+}
+.footer__item_compare::before{
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 9px;
+  left: -25px;
+  background-image: url(./../img/compare.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: invert(77%) sepia(35%) saturate(2805%) hue-rotate(0deg)
+  brightness(104%) contrast(104%);
+}
+.footer__item_cart::before{
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 9px;
+  left: -25px;
+  background-image: url(./../img/cart.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: invert(77%) sepia(35%) saturate(2805%) hue-rotate(0deg)
+  brightness(104%) contrast(104%);
+}
+.footer__item:hover {
+  opacity: 100%;
+}
+.footer__item:active {
+  opacity: 30%;
+}
+.footer__link {
+  color: #ffffff;
+}
+.footer__address {
+  color: #ffffff;
+}
+.footer__tel-link {
+  color: #ffffff;
+}
+.main-navigation_theme-footer .main-navigation__item-link {
+  color: #ffffff;
+}
+.footer__social-image {
+  opacity: 30%;
+}
+.footer__social-image:hover {
+  opacity: 60%;
+}
+.footer__social-image:active {
+  opacity: 10%;
+}
+.footer__html-image img {
+  filter: invert(77%) sepia(35%) saturate(2805%) hue-rotate(0deg)
+    brightness(104%) contrast(104%);
+}
+.footer__html-image:hover {
+  opacity: 60%;
+}
+.footer__html-image:active {
+  opacity: 30%;
+}
+.footer__logo-link {
+  color: inherit;
 }
