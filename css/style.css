@@ -104,6 +104,11 @@ a {
   line-height: 30px;
   color: #000;
 }
+.main-navigation__button{
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
 .main-header__user-navigation a:hover {
   opacity: 60%;
 }
@@ -135,12 +140,29 @@ a {
   font-size: 15px;
   line-height: 30px;
   color: #000;
+  outline: none;
 }
 .search-form__button {
   transition: all 0.3s;
   background-color: #f7e296;
   display: none;
   color: #000;
+  widows: 85px;
+  height: 45px;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: none;
+  border: 1px solid black;
+}
+.search-form__button::before{
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: -40px;
+  width: 250px;
+  height: 1px;
+  background-color: black;
+
 }
 .search-form__button:hover {
   background-color: #000;
@@ -151,8 +173,17 @@ a {
   color: #ffffff;
   opacity: 30%;
 }
-.search-form__input:focus + .search-form__button {
+.search-form_show .search-form__button{
   display: block;
+}
+.main-navigation__button-plus{
+  position: relative;
+  top: 5px;
+ font-size: 30px;
+ opacity: 30%;
+}
+.search-form__container{
+  display: flex;
 }
 .main-navigation__item-link {
   letter-spacing: 3.6px;
@@ -515,6 +546,9 @@ a {
   flex-direction: column;
   column-gap: 65px;
 }
+.main-navigation__catalog_show{
+  display: flex;
+}
 .main-navigation__catalog-item:nth-child(5) {
   margin-bottom: 50px;
 }
@@ -740,6 +774,27 @@ padding-left: 20px;
 .contacts__map {
   margin-top: 45px;
 }
+.contacts-modal {
+  position: absolute;
+  bottom: -1000px;
+  left: 200px;
+  box-shadow: 10px 10px 20px rgba(4, 6, 6, 0.2);
+  width: 960px;
+  height: 560px;
+  background-color: #ffffff;
+  z-index: 1;
+  display: none;
+}
+.map-modal {
+  position: absolute;
+  bottom: -1800px;
+  left: 200px;
+  box-shadow: 10px 10px 20px rgba(4, 6, 6, 0.2);
+  width: 960px;
+  height: 560px;
+  z-index: 1;
+  display: none;
+}
 .contacts-modal__container {
   display: flex;
   flex-wrap: wrap;
@@ -748,12 +803,6 @@ padding-left: 20px;
   padding-right: 100px;
   padding-bottom: 90px;
   justify-content: space-between;
-}
-.contacts-modal {
-  position: relative;
-  box-shadow: 10px 10px 20px rgba(4, 6, 6, 0.2);
-  width: 960px;
-  height: 560px;
 }
 .contacts-modal__textarea-container {
   width: 100%;
@@ -866,4 +915,9 @@ padding-left: 20px;
   background-color: #f0c52e;
   font-size: 40px;
   color: #ffffff;
+  outline: none;
+  cursor: pointer;
+}
+.modal-show{
+  display: block;
 }

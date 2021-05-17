@@ -19,21 +19,20 @@
           method="post"
           action="https://echo.htmlacademy.ru"
         >
-          <input
-            class="search-form__input"
-            type="search"
-            placeholder="Поиск по сайту"
-          />
-          <button class="search-form__button" type="submit">
-            <span class="search-form__text"> Найти </span>
-          </button>
+          <div class="search-form__container">
+            <input
+              class="search-form__input"
+              type="search"
+              placeholder="Поиск по сайту"
+            />
+            <button class="search-form__button" type="submit">
+              <span class="search-form__text"> Найти </span>
+            </button>
+          </div>
         </form>
         <ul class="main-header__user-navigation">
           <li class="main-header__item">
-            <a href="#" class="main-header__login">Валентин Петухов</a>
-          </li>
-          <li class="main-header__item">
-            <a href="#" class="main-header__exit">Выйти</a>
+            <a href="#" class="main-header__login">Войти</a>
           </li>
           <li class="main-header__item">
             <a href="#" class="main-header__compare">Сравнить</a>
@@ -52,7 +51,9 @@
       >
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
-            <a class="main-navigation__item-link" href="#">Каталог товаров</a>
+            <a class="main-navigation__item-link" href="catalog.html"
+              >Каталог товаров</a
+            >
             <button class="main-navigation__button" type="button">
               <span class="visually-hidden"> Открыть каталог </span>
               <span class="main-navigation__button-plus"> + </span>
@@ -119,107 +120,120 @@
         <div class="big-container">
           <section class="filter">
             <h2 class="filter__menu">Фильтр:</h2>
+            <h3 class="filter-form__name">Стоимость</h3>
+            <div class="slider filter-form__slider">
+              <div class="slider__active-bar"></div>
+              <div class="slider__bar"></div>
+              <button class="slider__button slider__button_min"></button>
+              <button class="slider__button slider__button_max"></button>
+              <span class="slider__text slider__text_min">от 0</span>
+              <span class="slider__text slider__text_max">до 5000</span>
+            </div>
             <form
               class="filter-form filter__form"
               method="get"
               action="https://echo.htmlacademy.ru"
             >
-              <fieldset class="filter-form__menu">
-                <legend class="filter-form__name">Цвет</legend>
-                <ul class="filter-form__list">
-                  <li class="filter-form__item">
-                    <label class="filter-form__label">
-                      <input
-                        class="filter-form__input"
-                        type="checkbox"
-                        name="black"
-                        checked
-                      />
-                      <span class="filter-form__box"></span>
-                      <span class="filter-form__text">Черный</span></label
-                    >
-                  </li>
-                  <li class="filter-form__item">
-                    <label class="filter-form__label">
-                      <input
-                        class="filter-form__input"
-                        type="checkbox"
-                        name="white"
-                      />
-                      <span class="filter-form__box"></span>
-                      <span class="filter-form__text">Белый</span></label
-                    >
-                  </li>
-                  <li class="filter-form__item">
-                    <label class="filter-form__label">
-                      <input
-                        class="filter-form__input"
-                        type="checkbox"
-                        name="blue"
-                        checked
-                      /><span class="filter-form__box"></span>
-                      <span class="filter-form__text">Синий</span>
-                    </label>
-                  </li>
-                  <li class="filter-form__item">
-                    <label class="filter-form__label">
-                      <input
-                        class="filter-form__input"
-                        type="checkbox"
-                        name="red"
-                        checked
-                        disabled
-                      /><span class="filter-form__box"></span>
-                      <span class="filter-form__text">Красный</span></label
-                    >
-                  </li>
-                  <li class="filter-form__item">
-                    <label class="filter-form__label">
-                      <input
-                        class="filter-form__input"
-                        type="checkbox"
-                        name="pink"
-                        disabled
-                      /><span class="filter-form__box"></span>
-                      <span class="filter-form__text">Розовый</span></label
-                    >
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="filter-form__menu">
-                <legend class="filter-form__name">Bluetooth</legend>
-                <ul class="filter-form__list">
-                  <li class="filter-form__item">
-                    <label class="filter-form__label">
-                      <input
-                        class="filter-form__input"
-                        type="radio"
-                        name="bluetooth"
-                        value="have"
-                        checked
-                      />
-                      <span class="filter-form__radio"></span>
-                      <span class="filter-form__text">Есть</span></label
-                    >
-                  </li>
-                  <li class="filter-form__item">
-                    <label class="filter-form__label">
-                      <input
-                        class="filter-form__input"
-                        type="radio"
-                        name="bluetooth"
-                        value="no"
-                        disabled
-                      />
-                      <span class="filter-form__radio"></span>
-                      <span class="filter-form__text">Нет</span></label
-                    >
-                  </li>
-                </ul>
-              </fieldset>
-              <button class="button filter-form__button" type="submit">
-                Показать
-              </button>
+              <div class="filter-form__container">
+                <fieldset class="filter-form__menu">
+                  <legend class="filter-form__name">Цвет</legend>
+                  <ul class="filter-form__list">
+                    <li class="filter-form__item">
+                      <label class="filter-form__label">
+                        <input
+                          class="filter-form__input"
+                          type="checkbox"
+                          name="black"
+                          checked
+                        />
+                        <span class="filter-form__box"></span>
+                        <span class="filter-form__text">Черный</span></label
+                      >
+                    </li>
+                    <li class="filter-form__item">
+                      <label class="filter-form__label">
+                        <input
+                          class="filter-form__input"
+                          type="checkbox"
+                          name="white"
+                        />
+                        <span class="filter-form__box"></span>
+                        <span class="filter-form__text">Белый</span></label
+                      >
+                    </li>
+                    <li class="filter-form__item">
+                      <label class="filter-form__label">
+                        <input
+                          class="filter-form__input"
+                          type="checkbox"
+                          name="blue"
+                          checked
+                        /><span class="filter-form__box"></span>
+                        <span class="filter-form__text">Синий</span>
+                      </label>
+                    </li>
+                    <li class="filter-form__item">
+                      <label class="filter-form__label">
+                        <input
+                          class="filter-form__input"
+                          type="checkbox"
+                          name="red"
+                          checked
+                          disabled
+                        /><span class="filter-form__box"></span>
+                        <span class="filter-form__text">Красный</span></label
+                      >
+                    </li>
+                    <li class="filter-form__item">
+                      <label class="filter-form__label">
+                        <input
+                          class="filter-form__input"
+                          type="checkbox"
+                          name="pink"
+                          disabled
+                        /><span class="filter-form__box"></span>
+                        <span class="filter-form__text">Розовый</span></label
+                      >
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="filter-form__container">
+                <fieldset class="filter-form__menu">
+                  <legend class="filter-form__name">Bluetooth</legend>
+                  <ul class="filter-form__list">
+                    <li class="filter-form__item">
+                      <label class="filter-form__label">
+                        <input
+                          class="filter-form__input"
+                          type="radio"
+                          name="bluetooth"
+                          value="have"
+                          checked
+                        />
+                        <span class="filter-form__radio"></span>
+                        <span class="filter-form__text">Есть</span></label
+                      >
+                    </li>
+                    <li class="filter-form__item">
+                      <label class="filter-form__label">
+                        <input
+                          class="filter-form__input"
+                          type="radio"
+                          name="bluetooth"
+                          value="no"
+                          disabled
+                        />
+                        <span class="filter-form__radio"></span>
+                        <span class="filter-form__text">Нет</span></label
+                      >
+                    </li>
+                  </ul>
+                </fieldset>
+                <button class="button filter-form__button" type="submit">
+                  Показать
+                </button>
+              </div>
             </form>
           </section>
           <section class="catalog">
@@ -240,11 +254,11 @@
                   <a class="catalog__sort-link" href="#">По популярности</a>
                 </li>
               </ul>
-              <button class="catalog__button-down">
-                <span class="visually-hidden">Вниз</span>
-              </button>
               <button class="catalog__button-up">
                 <span class="visually-hidden">Вверх</span>
+              </button>
+              <button class="catalog__button-down catalog__button-down_active">
+                <span class="visually-hidden">Вниз</span>
               </button>
             </div>
             <ul class="catalog__list">
@@ -449,5 +463,6 @@
         </div>
       </div>
     </footer>
+    <script src="catalog.js"></script>
   </body>
 </html>

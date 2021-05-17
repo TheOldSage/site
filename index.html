@@ -19,14 +19,16 @@
           method="post"
           action="https://echo.htmlacademy.ru"
         >
-          <input
-            class="search-form__input"
-            type="search"
-            placeholder="Поиск по сайту"
-          />
-          <button class="search-form__button" type="submit">
-            <span class="search-form__text"> Найти </span>
-          </button>
+          <div class="search-form__container">
+            <input
+              class="search-form__input"
+              type="search"
+              placeholder="Поиск по сайту"
+            />
+            <button class="search-form__button" type="submit">
+              <span class="search-form__text"> Найти </span>
+            </button>
+          </div>
         </form>
         <ul class="main-header__user-navigation">
           <li class="main-header__item">
@@ -41,11 +43,17 @@
         </ul>
       </div>
       <nav
-        class="main-navigation main-header__navigation main-navigation_theme-header"
+        class="
+          main-navigation
+          main-header__navigation
+          main-navigation_theme-header
+        "
       >
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
-            <a class="main-navigation__item-link" href="catalog.html">Каталог товаров</a>
+            <a class="main-navigation__item-link" href="catalog.html"
+              >Каталог товаров</a
+            >
             <button class="main-navigation__button" type="button">
               <span class="visually-hidden"> Открыть каталог </span>
               <span class="main-navigation__button-plus"> + </span>
@@ -322,9 +330,8 @@
               <li class="user-help__button-item">
                 <button
                   class="button user-help__button user-help__button_active"
-                ><span>
-                  Доставка
-                </span>
+                >
+                  <span> Доставка </span>
                 </button>
               </li>
               <li class="user-help__button-item">
@@ -440,7 +447,14 @@
                 сможете проверить работоспособность покупки. Всякое бывает.
               </p>
               <div class="contacts__map">
-                <img src="./img/map.png" alt="Карта" />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2228.5253211843155!2d92.87705258330335!3d56.044207299104905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cd7aef1ab238f4d%3A0xb948e64cd6c0995d!2z0JbQmiAi0JrQstCw0LTRgNC-Ig!5e0!3m2!1sru!2sru!4v1621253409215!5m2!1sru!2sru"
+                  width="560"
+                  height="222"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
               </div>
               <button class="button contacts__button" type="button">
                 Напишите нам
@@ -449,6 +463,33 @@
           </section>
         </div>
       </div>
+      <section class="map-modal">
+        <form
+          action="https://echo.htmlacademy.ru"
+          class="contacts-modal__form"
+          method="post"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2228.5253211843155!2d92.87705258330335!3d56.044207299104905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cd7aef1ab238f4d%3A0xb948e64cd6c0995d!2z0JbQmiAi0JrQstCw0LTRgNC-Ig!5e0!3m2!1sru!2sru!4v1621253409215!5m2!1sru!2sru"
+            width="960"
+            height="560"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+          <div class="map__container"></div>
+          <button
+            class="
+              button-сlose
+              contacts-form__button contacts-form__button_close
+            "
+            type="button"
+          >
+            <span class="visually-hidden">Закрыть</span>
+            <span class="button-close__exit">x</span>
+          </button>
+        </form>
+      </section>
       <section class="contacts-modal">
         <form
           action="https://echo.htmlacademy.ru"
@@ -475,7 +516,9 @@
             <div class="contacts-modal__textarea-container">
               <label class="contacts-modal__label-container">
                 <span
-                  class="contacts-modal__label-text contacts-modal__label-text_area"
+                  class="
+                    contacts-modal__label-text contacts-modal__label-text_area
+                  "
                   >Текст письма:</span
                 >
                 <textarea
@@ -490,7 +533,13 @@
               Отправить
             </button>
           </div>
-          <button class="button-сlose contacts-form__button contacts-form__button_close" type="button">
+          <button
+            class="
+              button-сlose
+              contacts-form__button contacts-form__button_close
+            "
+            type="button"
+          >
             <span class="visually-hidden">Закрыть</span>
             <span class="button-close__exit">x</span>
           </button>
@@ -516,9 +565,13 @@
           </ul>
         </div>
         <div class="footer__navigation-container">
-          <p class="footer__address">г. Москва, ул. Строителей, 15</p>
+          <a href="#" class="footer__address">г. Москва, ул. Строителей, 15</a>
           <nav
-            class="main-navigation footer__navigation main-navigation_theme-footer"
+            class="
+              main-navigation
+              footer__navigation
+              main-navigation_theme-footer
+            "
           >
             <ul class="main-navigation__list">
               <li class="main-navigation__item">
