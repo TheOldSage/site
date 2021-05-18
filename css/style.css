@@ -320,6 +320,17 @@ a {
   font-weight: 900;
   color: #000;
 }
+.about-us__company::before{
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background-image: url(./../img/slider-button.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 30%;
+}
 .about-us__company-list {
   list-style: none;
 }
@@ -467,7 +478,9 @@ a {
   background-image:url(./../img/search.svg) ;
   background-repeat: no-repeat;
   background-position: 0 0;
-
+}
+.search-form_show::before{
+  top: 15px;
 }
 .main-header__user-navigation {
   width: 500px;
@@ -608,8 +621,25 @@ a {
 .product__slide-list {
   display: flex;
   justify-content: center;
-  margin-left: 220px;
-  margin-top: 35px;
+  margin-left: 120px;
+  margin-top: 30px;
+  list-style: none;
+  width: 90px;
+}
+.product__button{
+  width: 25px;
+  height: 25px;
+  background-image: url(./../img/slider-button-empty.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color:#ffffff;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.product__button_active{
+  background-image: url(./../img/slider-button_active.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 .product__button-list {
   display: flex;
@@ -759,6 +789,9 @@ padding-left: 20px;
 }
 .about-us__company {
   margin-top: 15px;
+  display: flex;
+  align-items: center;
+
 }
 .about-us__button{
   display: flex;
